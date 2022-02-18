@@ -13,7 +13,7 @@ const array = [
     ip_address_server,
     boolean
 ]
-console.log(array)
+// console.log(array)
 
 // for (let i = 0; i < array.length; i++) {
 //     console.log(array[i]);
@@ -42,5 +42,63 @@ function func() {
 const isOdd = () => {
     return "Success";
 }
-console.log(isOdd());
+// console.log(isOdd());
+
+
+
+// const modifiedData = data.map((element) => {
+//     if (element === 3) {
+//         element = 13
+//     }
+//     return element
+// })
+// // console.log(modifiedData)
+//
+// const filteredData = data.filter((element) => {
+//     if (element === 10) {
+//         return element
+//     }
+// })
+// // console.log(filteredData)
+//
+// const foundElement = data.find((element) => {
+//     if (element === 10) {
+//         return element
+//     }
+// })
+// // console.log(foundElement)
+
+
+// let data = [
+//     10,
+//     3,
+//     17,
+//     28,
+//     10
+// ]
+//
+// const result = data.filter((element) => {
+//     if (element > 7 && element < 25) {
+//         return element
+//     }
+// })
+// // console.log(result)
+//
+// const newResult = data.map((element) => {
+//     if (element === 17) {
+//         element = 15
+//     }
+//     return element
+// })
+// console.log(newResult)
+//
+// let title = "Titanic";
+// title = 20;
+
+
+
+
+
+
+
 
