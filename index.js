@@ -43,3 +43,4 @@ const isOdd = () => {
     return "Success";
 }
 console.log(isOdd());
+
