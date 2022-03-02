@@ -1,29 +1,36 @@
-import express = require("express")
+import express = require("express");
 import {Application, Request, Response} from "express";
 import {User} from "./types/User";
-import {LoginRequest} from "./types/LoginRequest";
+import {LoginData} from "./types/LoginData";
 
 const app: Application = express();
 
-app.get("/user", (req: Request, res: Response) => {
-    let user: User = {
-        id: 1,
-        password: "1234",
-        username: "dido"
-    }
-    res.send(user)
+app.get("/users", (request: Request, response: Response) => {
+    let users: User[] = [
+        {
+            id: 1,
+            first_name: "Dilyan",
+            password: "1234"
+        },
+        {
+            id: 2,
+            first_name: "Obreten",
+            password: "1234"
+        },
+    ]
+    response.send(users)
 })
 
-app.get("/login", (req: Request, res: Response) => {
-    const loginRequest: LoginRequest = req.query;
-    if (!loginRequest.username || !loginRequest.password) {
-        res.send({
+app.get("/login", (request: Request, response: Response) => {
+    const loginData: LoginData = request.query;
+    if (!loginData.username || !loginData.password) {
+        return response.send({
             status: 400,
-            message: "Username or Password have not been provided"
+            message: "Username or Password not provided"
         })
     }
 
-    res.send({
+    response.send({
         status: 200,
         message: "Logged in successfully"
     })
